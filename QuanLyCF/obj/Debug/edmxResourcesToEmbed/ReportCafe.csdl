@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyQuanCafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuanLyQuanCafeEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="USP_GetListBillByDateForReport" ReturnType="Collection(QuanLyQuanCafeModel.USP_GetListBillByDateForReport_Result)">
+      <Parameter Name="checkIn" Mode="In" Type="DateTime" />
+      <Parameter Name="checkOut" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="USP_GetListBillByDateForReport_Result">
+    <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+    <Property Type="Double" Name="totalPrice" Nullable="true" />
+    <Property Type="DateTime" Name="DateCheckIn" Nullable="false" />
+    <Property Type="DateTime" Name="DateCheckOut" Nullable="true" />
+    <Property Type="Int32" Name="discount" Nullable="true" />
+  </ComplexType>
+</Schema>

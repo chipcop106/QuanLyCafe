@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyQuanCafeModelStoreContainer" CdmEntityContainer="QuanLyQuanCafeEntities">
+    <FunctionImportMapping FunctionImportName="USP_GetListBillByDateForReport" FunctionName="QuanLyQuanCafeModel.Store.USP_GetListBillByDateForReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyQuanCafeModel.USP_GetListBillByDateForReport_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+          <ScalarProperty Name="DateCheckIn" ColumnName="DateCheckIn" />
+          <ScalarProperty Name="DateCheckOut" ColumnName="DateCheckOut" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
